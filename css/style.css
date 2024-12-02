@@ -1,0 +1,130 @@
+:root {
+    --beneon-primary-color: #28b6f5;
+    --beneon-secondary-color: #414040;
+    --beneon-thirty-color: #fff;
+    --beneon-olo-color: #000;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.beneon-editor-container {
+    height: 100%;
+    width: 100%;
+    background-color: var(--beneon-olo-color);
+    color: var(--beneon-thirty-color)
+}
+
+.beneon-editor-header {
+    height: 55px;
+    width: 100%;
+    background-color: var(--beneon-secondary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.beneon-editor-header button {
+    background-color: var(--beneon-primary-color);
+    color: var(--beneon-thirty-color);
+    padding: .5em;
+    border-radius: .7em;
+    border-color: var(--beneon-primary-color);
+}
+
+.beneon-editor-group-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.beneon-editor-preview {
+    width: 65%;
+    height: 85%;
+    margin: 1em;
+    background-image: url(../assets/bg.jpeg);
+    background-size: cover;
+    border: 5px solid transparent;
+    border-radius: 1em;
+    /* animation: ledBorderAnimation 2s infinite; */
+}
+
+.beneon-editor-panel {
+    height: 100%;
+    width: 35%;
+}
+
+.beneon-editor-animation {
+    position: absolute;
+    width: calc(65% - 2em);
+    height: 85%;
+    filter: blur(8px);
+}
+
+.beneon-editor-animation-top {
+    height: 12px;
+    width: 100%;
+    background-image: linear-gradient(90deg, transparent, #13348f, #7d9ef5, transparent);
+    background-size: 200% 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: -6px;
+    animation: lightTop 4s linear infinite;
+    animation-delay: 1s;
+}
+
+.beneon-editor-animation-right {
+    height: 100%;
+    width: 12px;
+    background-image: linear-gradient(180deg, transparent, #13348f, #7d9ef5, transparent);
+    background-size: 200% 100%;
+    border-radius: 5px;
+    position: absolute;
+    right: 6px;
+    animation: lightTop 4s linear infinite;
+    animation-delay: 2s;
+}
+
+.beneon-editor-animation-bottom {
+    height: 12px;
+    width: 100%;
+    background-image: linear-gradient(270deg, transparent, #13348f, #7d9ef5, transparent);
+    background-size: 200% 100%;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -6px;
+    left: -6px;
+    animation: lightBottom 4s linear infinite;
+    animation-delay: 3s;
+}
+
+.beneon-editor-animation-left {
+    height: 100%;
+    width: 12px;
+    background-image: linear-gradient(0deg, transparent, #8e9fce, #7d9ef5, transparent);
+    background-size: 200% 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: -6px;
+    animation: lightLeft 4s linear infinite;
+    animation-delay: 4s;
+}
+
+.beneon-editor-panel {
+    background-color: #66666650;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    height: calc(100% - 55px - 2em);
+}

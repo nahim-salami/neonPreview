@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.configurator-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header {
+  padding: 20px;
+  background: #222;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #ff7c00;
+}
+
+.configurator-main {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+}
+
+input[type="color"] {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: 1px dashed #555;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dimension-group {
+  display: flex;
+  gap: 20px;
+}
+
+.dimension {
+  flex: 1;
+}
+
+.preview-section {
+  background: #000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.neon-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  color: #ff0000;
+  word-wrap: break-word;
+}
+
+#preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  border: 2px solid #555;
+}
+
+/* Neon Controls */
+.neon-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Buttons */
+.button {
+  padding: 10px 20px;
+  background: #ff7c00;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #ff5200;
+}
+
+/* Support Options */
+.support-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.support-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}

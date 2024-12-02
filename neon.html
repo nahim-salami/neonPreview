@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Sign Configurator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="configurator-container">
+    <header class="configurator-header">
+      <h1>Neon Sign Configurator</h1>
+    </header>
+
+    <main class="configurator-main">
+      <!-- Section: Text Input -->
+      <section class="section">
+        <h2>Enter Neon Text</h2>
+        <div class="input-group">
+          <input type="text" id="neon-text" placeholder="Enter your neon text" />
+          <input type="color" id="text-color" value="#ff0000" />
+        </div>
+      </section>
+
+      <!-- Section: File Upload -->
+      <section class="section">
+        <h2>Upload Your Design</h2>
+        <input type="file" id="file-upload" accept=".svg" class="file-input" />
+        <p class="upload-info">Supported formats: SVG</p>
+      </section>
+
+      <!-- Section: Customization -->
+      <section class="section">
+        <h2>Customize Dimensions</h2>
+        <div class="dimension-group">
+          <div class="dimension">
+            <label for="size-width">Width (in current unit):</label>
+            <input type="number" id="size-width" value="50" />
+          </div>
+          <div class="dimension">
+            <label for="size-height">Height (in current unit):</label>
+            <input type="number" id="size-height" value="20" />
+          </div>
+          <div class="dimension">
+            <label for="unit">Units:</label>
+            <select id="unit">
+              <option value="cm">Centimeters (cm)</option>
+              <option value="inches">Inches (in)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Neon Style Customization</h2>
+        <div class="neon-controls">
+          <div class="control">
+            <label for="neon-intensity">Neon Intensity</label>
+            <input type="range" id="neon-intensity" min="1" max="10" value="5" />
+          </div>
+          <button id="animate-neon" class="button">Animate Neon</button>
+          <button id="reset-preview" class="button">Clear / Reset</button>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2>Choose Background Support</h2>
+        <div class="support-options">
+          <label>
+            <input type="checkbox" id="support-clear" />
+            Clear (no support)
+          </label>
+          <label>
+            <input type="checkbox" id="support-acrylic" />
+            Acrylic
+          </label>
+          <label>
+            <input type="checkbox" id="support-wood" />
+            Wood
+          </label>
+        </div>
+      </section>
+      
+
+      <!-- Section: Preview -->
+      <section class="section preview-section">
+        <h2>Preview</h2>
+        <div id="preview-container">
+          <div id="preview-text" class="neon-text"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
